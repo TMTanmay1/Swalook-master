@@ -273,12 +273,14 @@ const handlePriceBlur = (index, value) => {
 
   useEffect(() => {
     if (grand_total > Minimum) {
-      setDeductedPoint(location.state.deductedPoints || 0);
+      setDeductedPoint(location.state.deductedPoints);
     } else {
       setDeductedPoint(0);
     }
   }, [grand_total, Minimum]);
 
+
+  console.log('Deducted Points:', deductedPoint);
 
   const bname = atob(localStorage.getItem('branch_name'));  
 

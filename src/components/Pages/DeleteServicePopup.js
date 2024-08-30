@@ -25,7 +25,7 @@ function DeleteServicePopup({onClose}) {
     })
     .then((data)=>{
       console.log(data.table_data);
-      setServiceOptions(data.data.table_data.map((service) => {
+      setServiceOptions(data.data.map((service) => {
         return {id: service.id, value: service.service}
       }));
     })
